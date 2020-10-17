@@ -29,13 +29,13 @@ namespace Парс
             var htmlsecond = @"https://zachestnyibiznes.ru"; //ссылка для конечной работы
             var htmlthird = htmlsecond + cutedcodeofnode; //добавление к ссылке адреса кода для перехода к интересующей организации
             HtmlWeb websecond = new HtmlWeb(); //объявление нового экземпляра класса HtmlWeb
-            var htmlogrn = websecond.Load(htmlthird);
-            var node2 = htmlogrn.DocumentNode.SelectSingleNode("//span[@id='ogrn']");
-            var ogrnresult = node2.InnerHtml;
-            Ogrn.Text = ogrnresult;
-            var kpp2 = htmlogrn.DocumentNode.SelectSingleNode("//span[@id='kpp']");
-            var kppresult = kpp2.InnerHtml;
-            Kpp.Text = kppresult;
+            var htmlogrn = websecond.Load(htmlthird); //загрузка страницы по адресу вида https://zachestnyibiznes.ru/company/ul/1147017012119_7017356248_OOO-DEKOST
+            var node2 = htmlogrn.DocumentNode.SelectSingleNode("//span[@id='ogrn']"); //выделение узла с ОГРН
+            var ogrnresult = node2.InnerHtml; //получение значения ОГРН из узла
+            Ogrn.Text = ogrnresult; //отображение в форме полученного ОГРН
+            var kpp2 = htmlogrn.DocumentNode.SelectSingleNode("//span[@id='kpp']"); //выделение узла с КПП
+            var kppresult = kpp2.InnerHtml; //получение значения КПП из узла
+            Kpp.Text = kppresult; //отображение в форме полученного КПП
         }
 
         private void Inn_TextForParsing(object sender, EventArgs e) //строка для введения ИНН для последующего парсинга
