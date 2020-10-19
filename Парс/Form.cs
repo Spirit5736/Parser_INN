@@ -9,22 +9,19 @@ namespace Парс
         public Form()
         {
             InitializeComponent();
-
         }
        
         private void Button_StartParsing(object sender, EventArgs e) //кнопка запуска алгоритма парсинга
         {
-            string error = "Ошибка";
             if (Inn.Text == "")
             {
                 MessageBox.Show(
-       "Введите ИНН", 
-       "Сообщение",
-       MessageBoxButtons.OK,
-       MessageBoxIcon.Error,
-       MessageBoxDefaultButton.Button1,
-       MessageBoxOptions.DefaultDesktopOnly);
-                
+                    "Введите ИНН",       
+                    "Сообщение",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1,
+                    MessageBoxOptions.DefaultDesktopOnly);
             }
             else
             {
