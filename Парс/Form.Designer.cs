@@ -45,7 +45,6 @@
             this.write_inn.Size = new System.Drawing.Size(144, 13);
             this.write_inn.TabIndex = 0;
             this.write_inn.Text = "Введите ИНН организации";
-            this.write_inn.Click += new System.EventHandler(this.Label_WriteInn);
             // 
             // ready_ogrn
             // 
@@ -55,7 +54,6 @@
             this.ready_ogrn.Size = new System.Drawing.Size(104, 13);
             this.ready_ogrn.TabIndex = 1;
             this.ready_ogrn.Text = "ОГРН организации";
-            this.ready_ogrn.Click += new System.EventHandler(this.Ready_ogrn_Click);
             // 
             // Inn
             // 
@@ -63,7 +61,6 @@
             this.Inn.Name = "Inn";
             this.Inn.Size = new System.Drawing.Size(100, 20);
             this.Inn.TabIndex = 2;
-            this.Inn.TextChanged += new System.EventHandler(this.Inn_TextForParsing);
             // 
             // Ogrn
             // 
@@ -72,7 +69,6 @@
             this.Ogrn.ReadOnly = true;
             this.Ogrn.Size = new System.Drawing.Size(207, 20);
             this.Ogrn.TabIndex = 3;
-            this.Ogrn.TextChanged += new System.EventHandler(this.Ogrn_ResultOfParsing);
             // 
             // button1
             // 
@@ -92,7 +88,6 @@
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "КПП организации";
-            this.label1.Click += new System.EventHandler(this.Label_WriteKpp);
             // 
             // Kpp
             // 
@@ -101,7 +96,6 @@
             this.Kpp.ReadOnly = true;
             this.Kpp.Size = new System.Drawing.Size(207, 20);
             this.Kpp.TabIndex = 8;
-            this.Kpp.TextChanged += new System.EventHandler(this.Kpp_ResultOfParsing);
             // 
             // Form
             // 
@@ -117,7 +111,6 @@
             this.Controls.Add(this.write_inn);
             this.Name = "Form";
             this.Text = "Парс";
-            this.Load += new System.EventHandler(this.Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
